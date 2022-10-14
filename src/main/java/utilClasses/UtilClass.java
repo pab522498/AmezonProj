@@ -39,7 +39,6 @@ public class UtilClass {
 		Properties prop = new Properties();
 		prop.load(file);
 		return prop.getProperty(key);
-		
 	}
 	
 	public static String getScreenshot(WebDriver driver,String methodName) throws IOException {
