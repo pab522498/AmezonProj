@@ -12,6 +12,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -42,7 +43,6 @@ public class UtilClass {
 	}
 	
 	public static String getScreenshot(WebDriver driver,String methodName) throws IOException {
-		
 		String path =""+methodName+".png";
 		TakesScreenshot k = (TakesScreenshot)driver;
 		File source = k.getScreenshotAs(OutputType.FILE);
@@ -51,6 +51,10 @@ public class UtilClass {
 		return path;
 	}
 	
+	public static void hoverMethod(WebDriver driver,WebElement element) {
+		Actions act = new Actions(driver);
+		act.moveToElement(element);
+	}
 
 	
 	
