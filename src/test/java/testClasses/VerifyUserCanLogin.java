@@ -41,6 +41,7 @@ public class VerifyUserCanLogin {
 		reports = BaseClass1.getExtentReporter();
 		extentTest = BaseClass1.getExtentTest("VerifyUserCanLogin");
 		driver=BaseClass1.getDriver(browser);
+		
 	}
 	
 	@BeforeMethod
